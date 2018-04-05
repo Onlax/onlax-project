@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Onlax
+Comment=Onlax P2P Cryptocurrency
+Comment[fr]=Onlax, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Onlax, eşten eşe kriptografik sanal para birimi
+Exec=onlax-qt %u
+Terminal=false
+Type=Application
+Icon=onlax128
+MimeType=x-scheme-handler/onlax;
+Categories=Office;Finance;
