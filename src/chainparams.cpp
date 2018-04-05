@@ -3,6 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The Solaris developers
+// Copyright (c) 2017-2018 The Onlax developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include "libzerocoin/Params.h"
@@ -95,12 +96,12 @@ public:
         pchMessageStart[3] = 0xa1;
         vAlertPubKey = ParseHex("043d9905c6efff2f7ab385bc7ac4dc8651d548f7200f07663afd284e80dea99fbcad44ea653d4038ddf61a15b48da715ecfb1cf9fbdeca9da37730da1077f6b93b");
         nDefaultPort = 44441;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // Solaris starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 20; // Onlax starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Solaris: 1 minute
-        nTargetSpacing = 1 * 60;  // Solaris: 1 minute
+        nTargetTimespan = 1 * 60; // Onlax: 1 minute
+        nTargetSpacing = 1 * 60;  // Onlax: 1 minute
         nMaturity = 10;
 	nMaxMoneyOut = 10000000000 * COIN;
         /** Height or Time Based Activations **/
@@ -128,13 +129,6 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 991052;
         hashGenesisBlock = genesis.GetHash();
-/*
-	printf("recalculating params for mainnet.\n");
-	for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ }
-        printf("new mainnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-        printf("new mainnet genesis nonce: %u\n", genesis.nNonce);
-        printf("new mainnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
-*/		
 
         assert(hashGenesisBlock == uint256("0x0000070bcc0c45447cbe5a220b3080597053b1c2f6706ea2994d6852b57f1041"));
         assert(genesis.hashMerkleRoot == uint256("0x6029cb2a43848a690427693993a0cd09090779c0765a17b288cb0147bc094240"));
@@ -205,8 +199,8 @@ public:
         vAlertPubKey = ParseHex("047eaad25f74afc874d0583d50777dccfe6a908ec9a85dc7525ae79322e29cebfd8fa6a1c96c63e94703b850a9fb46263a7cb651ff4f68dd21df7c42edfd30bf3e");
         nDefaultPort = 51474;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Solaris: 1 day
-        nTargetSpacing = 1 * 60;  // Solaris: 1 minute
+        nTargetTimespan = 1 * 60; // Onlax: 1 day
+        nTargetSpacing = 1 * 60;  // Onlax: 1 minute
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
@@ -268,8 +262,8 @@ public:
         pchMessageStart[3] = 0xac;
         nSubsidyHalvingInterval = 150;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Solaris: 1 day
-        nTargetSpacing = 1 * 60;        // Solaris: 1 minutes
+        nTargetTimespan = 24 * 60 * 60; // Onlax: 1 day
+        nTargetSpacing = 1 * 60;        // Onlax: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1454124731;
         genesis.nBits = 0x207fffff;
